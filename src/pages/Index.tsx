@@ -10,6 +10,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Heart, Scissors, Star, Bell, Plus } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import petsBanner from "@/assets/pets-banner.png";
+import heroDog from "@/assets/hero-dog.png";
+import heroCat from "@/assets/hero-cat.png";
+import heroRabbit from "@/assets/hero-rabbit.png";
+import groomingCat from "@/assets/grooming-cat.png";
+import vetDog from "@/assets/vet-dog.png";
 
 const Index = () => {
   const { toast } = useToast();
@@ -116,27 +122,40 @@ const Index = () => {
       <div className="container mx-auto px-6 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h1 className="text-4xl font-bold text-foreground mb-2">
-                Pet Care Planner 🐾
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Keep your furry friends happy and healthy
-              </p>
+          {/* Hero Banner */}
+          <div className="relative overflow-hidden rounded-2xl mb-6 bg-gradient-to-r from-primary/10 to-accent/10 p-8">
+            <div className="absolute right-0 top-0 opacity-20">
+              <img src={petsBanner} alt="Pets banner" className="h-40 w-auto object-cover" />
             </div>
-            <div className="flex items-center gap-3">
-              <AddTaskDialog 
-                pets={pets}
-                onAddTask={handleAddTask}
-                trigger={
-                  <Button variant="outline">
-                    <Plus className="h-4 w-4 mr-2" />
-                    Add Task
-                  </Button>
-                }
-              />
-              <AddPetDialog onAddPet={handleAddPet} />
+            <div className="relative z-10 flex items-center justify-between">
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3">
+                  <img src={heroDog} alt="Dog" className="w-16 h-16 rounded-full" />
+                  <img src={heroCat} alt="Cat" className="w-16 h-16 rounded-full" />
+                  <img src={heroRabbit} alt="Rabbit" className="w-16 h-16 rounded-full" />
+                </div>
+                <div>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                    Pet Care Planner 🐾
+                  </h1>
+                  <p className="text-lg text-muted-foreground">
+                    Keep your furry friends happy and healthy
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <AddTaskDialog 
+                  pets={pets}
+                  onAddTask={handleAddTask}
+                  trigger={
+                    <Button variant="outline">
+                      <Plus className="h-4 w-4 mr-2" />
+                      Add Task
+                    </Button>
+                  }
+                />
+                <AddPetDialog onAddPet={handleAddPet} />
+              </div>
             </div>
           </div>
 
@@ -207,7 +226,10 @@ const Index = () => {
                 <h2 className="text-2xl font-semibold">Your Pet Family</h2>
               </div>
               {pets.length === 0 ? (
-                <Card className="p-8 text-center">
+                <Card className="p-8 text-center relative overflow-hidden">
+                  <div className="absolute top-4 right-4 opacity-30">
+                    <img src={heroCat} alt="Cat" className="w-16 h-16" />
+                  </div>
                   <Heart className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No pets yet</h3>
                   <p className="text-muted-foreground mb-4">Add your first pet to get started!</p>
@@ -227,7 +249,10 @@ const Index = () => {
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold">Upcoming Schedule</h2>
               {upcomingTasks.length === 0 ? (
-                <Card className="p-8 text-center">
+                <Card className="p-8 text-center relative overflow-hidden">
+                  <div className="absolute top-4 right-4 opacity-30">
+                    <img src={vetDog} alt="Vet checkup" className="w-16 h-16" />
+                  </div>
                   <CalendarDays className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No upcoming tasks</h3>
                   <p className="text-muted-foreground mb-4">You're all caught up!</p>
@@ -253,7 +278,10 @@ const Index = () => {
                 <AddTaskDialog pets={pets} onAddTask={handleAddTask} />
               </div>
               {tasks.length === 0 ? (
-                <Card className="p-8 text-center">
+                <Card className="p-8 text-center relative overflow-hidden">
+                  <div className="absolute top-4 right-4 opacity-30">
+                    <img src={groomingCat} alt="Pet grooming" className="w-16 h-16" />
+                  </div>
                   <Bell className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No tasks yet</h3>
                   <p className="text-muted-foreground mb-4">Create your first task to get organized!</p>

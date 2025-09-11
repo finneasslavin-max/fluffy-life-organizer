@@ -3,6 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Calendar, Scissors, Heart, MoreVertical } from "lucide-react";
+import heroDog from "@/assets/hero-dog.png";
+import heroCat from "@/assets/hero-cat.png";
+import heroRabbit from "@/assets/hero-rabbit.png";
 
 interface Pet {
   id: string;
@@ -21,10 +24,10 @@ interface PetCardProps {
   onSelect?: (pet: Pet) => void;
 }
 
-const petEmojis = {
-  cat: "🐱",
-  dog: "🐶", 
-  rabbit: "🐰"
+const petImages = {
+  cat: heroCat,
+  dog: heroDog,
+  rabbit: heroRabbit
 };
 
 const petColors = {
@@ -39,8 +42,12 @@ export function PetCard({ pet, onSelect }: PetCardProps) {
           onClick={() => onSelect?.(pet)}>
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl">
-            {petEmojis[pet.type]}
+          <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+            <img 
+              src={petImages[pet.type]} 
+              alt={pet.type} 
+              className="w-10 h-10 object-cover rounded-full"
+            />
           </div>
           <div>
             <h3 className="font-semibold text-lg text-foreground">{pet.name}</h3>
