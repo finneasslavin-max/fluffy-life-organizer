@@ -10,7 +10,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Heart, Scissors, Star, Bell, Plus } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import petsBanner from "@/assets/pets-banner.png";
+import cozyBanner from "@/assets/cozy-banner.png";
+import cozyDog from "@/assets/cozy-dog.png";
+import cozyCat from "@/assets/cozy-cat.png";
 import heroDog from "@/assets/hero-dog.png";
 import heroCat from "@/assets/hero-cat.png";
 import heroRabbit from "@/assets/hero-rabbit.png";
@@ -118,14 +120,17 @@ const Index = () => {
   const completedToday = tasks.filter(task => task.completed).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/20 to-accent/10">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-6 py-8">
         {/* Header */}
         <div className="mb-8">
           {/* Hero Banner */}
-          <div className="relative overflow-hidden rounded-2xl mb-6 bg-gradient-to-r from-primary/10 to-accent/10 p-8">
-            <div className="absolute right-0 top-0 opacity-20">
-              <img src={petsBanner} alt="Pets banner" className="h-40 w-auto object-cover" />
+          <div className="relative overflow-hidden rounded-3xl mb-8 cozy-gradient warm-glow p-10 border-2 border-accent/20">
+            <div className="absolute right-4 top-4 opacity-30">
+              <img src={cozyDog} alt="Cozy dog" className="h-20 w-20 rounded-full shadow-lg" />
+            </div>
+            <div className="absolute right-20 bottom-4 opacity-25">
+              <img src={cozyCat} alt="Cozy cat" className="h-16 w-16 rounded-full shadow-lg" />
             </div>
             <div className="relative z-10 flex items-center justify-between">
               <div className="flex items-center gap-6">
@@ -135,11 +140,11 @@ const Index = () => {
                   <img src={heroRabbit} alt="Rabbit" className="w-16 h-16 rounded-full" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-2">
+                  <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-success bg-clip-text text-transparent mb-3">
                     Pet Care Planner 🐾
                   </h1>
-                  <p className="text-lg text-muted-foreground">
-                    Keep your furry friends happy and healthy
+                  <p className="text-xl text-muted-foreground font-medium">
+                    Keep your furry friends happy and healthy ✨
                   </p>
                 </div>
               </div>
@@ -160,48 +165,56 @@ const Index = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-            <Card>
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <Heart className="h-8 w-8 text-success" />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <Card className="warm-glow border-2 border-success/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-success/20 to-success/10 flex items-center justify-center">
+                    <Heart className="h-6 w-6 text-success" />
+                  </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Total Pets</p>
-                    <p className="text-2xl font-bold">{pets.length}</p>
+                    <p className="text-sm text-muted-foreground font-medium">Total Pets</p>
+                    <p className="text-3xl font-bold text-foreground">{pets.length}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <CalendarDays className="h-8 w-8 text-primary" />
+            <Card className="warm-glow border-2 border-primary/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
+                    <CalendarDays className="h-6 w-6 text-primary" />
+                  </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Upcoming Tasks</p>
-                    <p className="text-2xl font-bold">{upcomingTasks.length}</p>
+                    <p className="text-sm text-muted-foreground font-medium">Upcoming Tasks</p>
+                    <p className="text-3xl font-bold text-foreground">{upcomingTasks.length}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <Scissors className="h-8 w-8 text-accent" />
+            <Card className="warm-glow border-2 border-accent/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                    <Scissors className="h-6 w-6 text-accent" />
+                  </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Completed Today</p>
-                    <p className="text-2xl font-bold">{completedToday}</p>
+                    <p className="text-sm text-muted-foreground font-medium">Completed Today</p>
+                    <p className="text-3xl font-bold text-foreground">{completedToday}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <Star className="h-8 w-8 text-premium" />
+            <Card className="warm-glow border-2 border-premium/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-premium/20 to-premium/10 flex items-center justify-center">
+                    <Star className="h-6 w-6 text-premium" />
+                  </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Premium</p>
-                    <Badge variant="outline" className="text-premium border-premium">
-                      Upgrade
+                    <p className="text-sm text-muted-foreground font-medium">Premium</p>
+                    <Badge variant="outline" className="text-premium border-premium font-semibold">
+                      Upgrade ⭐
                     </Badge>
                   </div>
                 </div>
