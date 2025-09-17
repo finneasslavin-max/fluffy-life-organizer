@@ -8,11 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Heart, Scissors, Star, Bell, Plus } from "lucide-react";
+import { CalendarDays, Heart, Scissors, Star, Bell, Plus, User, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 import cozyBanner from "@/assets/cozy-banner.png";
 import cozyDog from "@/assets/cozy-dog.png";
 import cozyCat from "@/assets/cozy-cat.png";
+import realDog from "@/assets/real-dog.png";
+import realCat from "@/assets/real-cat.png";
+import realRabbit from "@/assets/real-rabbit.png";
 import heroDog from "@/assets/hero-dog.png";
 import heroCat from "@/assets/hero-cat.png";
 import heroRabbit from "@/assets/hero-rabbit.png";
@@ -41,6 +45,16 @@ const Index = () => {
       nextAppointment: "Dec 12, 2024",
       groomingProgress: 40,
       healthScore: 88
+    },
+    {
+      id: "3",
+      name: "Snowball",
+      type: "rabbit" as const,
+      breed: "Holland Lop",
+      age: 2,
+      nextAppointment: "Dec 20, 2024",
+      groomingProgress: 90,
+      healthScore: 95
     }
   ]);
 
@@ -134,10 +148,10 @@ const Index = () => {
             </div>
             <div className="relative z-10 flex items-center justify-between">
               <div className="flex items-center gap-6">
-                <div className="flex items-center gap-3">
-                  <img src={heroDog} alt="Dog" className="w-16 h-16 rounded-full" />
-                  <img src={heroCat} alt="Cat" className="w-16 h-16 rounded-full" />
-                  <img src={heroRabbit} alt="Rabbit" className="w-16 h-16 rounded-full" />
+                <div className="flex items-center gap-4">
+                  <img src={realDog} alt="Real dog" className="w-16 h-16 rounded-full shadow-lg" />
+                  <img src={realCat} alt="Real cat" className="w-16 h-16 rounded-full shadow-lg" />
+                  <img src={realRabbit} alt="Real rabbit" className="w-16 h-16 rounded-full shadow-lg" />
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-success bg-clip-text text-transparent mb-3">
@@ -148,7 +162,19 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
+                <Link to="/about">
+                  <Button variant="outline" className="gap-2">
+                    <User className="h-4 w-4" />
+                    About
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" className="gap-2">
+                    <Phone className="h-4 w-4" />
+                    Contact
+                  </Button>
+                </Link>
                 <AddTaskDialog 
                   pets={pets}
                   onAddTask={handleAddTask}
@@ -239,9 +265,9 @@ const Index = () => {
                 <h2 className="text-2xl font-semibold">Your Pet Family</h2>
               </div>
               {pets.length === 0 ? (
-                <Card className="p-8 text-center relative overflow-hidden">
+                <Card className="p-8 text-center relative overflow-hidden warm-glow border-2 border-accent/20">
                   <div className="absolute top-4 right-4 opacity-30">
-                    <img src={heroCat} alt="Cat" className="w-16 h-16" />
+                    <img src={realCat} alt="Real cat" className="w-16 h-16 rounded-full shadow-lg" />
                   </div>
                   <Heart className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No pets yet</h3>
@@ -262,9 +288,9 @@ const Index = () => {
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold">Upcoming Schedule</h2>
               {upcomingTasks.length === 0 ? (
-                <Card className="p-8 text-center relative overflow-hidden">
+                <Card className="p-8 text-center relative overflow-hidden warm-glow border-2 border-primary/20">
                   <div className="absolute top-4 right-4 opacity-30">
-                    <img src={vetDog} alt="Vet checkup" className="w-16 h-16" />
+                    <img src={realDog} alt="Real vet dog" className="w-16 h-16 rounded-full shadow-lg" />
                   </div>
                   <CalendarDays className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No upcoming tasks</h3>
@@ -291,9 +317,9 @@ const Index = () => {
                 <AddTaskDialog pets={pets} onAddTask={handleAddTask} />
               </div>
               {tasks.length === 0 ? (
-                <Card className="p-8 text-center relative overflow-hidden">
+                <Card className="p-8 text-center relative overflow-hidden warm-glow border-2 border-success/20">
                   <div className="absolute top-4 right-4 opacity-30">
-                    <img src={groomingCat} alt="Pet grooming" className="w-16 h-16" />
+                    <img src={realRabbit} alt="Real rabbit" className="w-16 h-16 rounded-full shadow-lg" />
                   </div>
                   <Bell className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-medium mb-2">No tasks yet</h3>
