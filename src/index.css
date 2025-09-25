@@ -17,25 +17,25 @@ All colors MUST be HSL.
     --popover: 30 60% 98%;
     --popover-foreground: 25 25% 25%;
 
-    --primary: 340 75% 68%;
+    --primary: 220 70% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 85% 92%;
-    --secondary-foreground: 25 30% 35%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 15% 25%;
 
-    --muted: 35 50% 94%;
-    --muted-foreground: 25 20% 55%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 15 85% 75%;
-    --accent-foreground: 25 25% 25%;
+    --accent: 200 85% 65%;
+    --accent-foreground: 220 25% 15%;
 
-    --success: 120 50% 65%;
+    --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 35 95% 70%;
-    --warning-foreground: 25 25% 25%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --premium: 280 70% 72%;
+    --premium: 260 75% 60%;
     --premium-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -74,25 +74,25 @@ All colors MUST be HSL.
     --popover: 25 25% 16%;
     --popover-foreground: 35 40% 92%;
 
-    --primary: 340 70% 65%;
+    --primary: 220 70% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 20% 20%;
-    --secondary-foreground: 35 35% 85%;
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 210 20% 85%;
 
-    --muted: 25 15% 18%;
-    --muted-foreground: 35 25% 70%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 210 15% 70%;
 
-    --accent: 15 80% 70%;
-    --accent-foreground: 25 30% 12%;
+    --accent: 200 80% 70%;
+    --accent-foreground: 220 30% 15%;
 
-    --success: 120 45% 60%;
+    --success: 142 65% 50%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 35 90% 68%;
-    --warning-foreground: 25 30% 12%;
+    --warning: 38 85% 55%;
+    --warning-foreground: 0 0% 100%;
 
-    --premium: 280 65% 70%;
+    --premium: 260 70% 65%;
     --premium-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
