@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { PetCard } from "@/components/PetCard";
 import { TaskCard } from "@/components/TaskCard";
-import { PremiumBanner } from "@/components/PremiumBanner";
 import { AddPetDialog } from "@/components/AddPetDialog";
 import { AddTaskDialog } from "@/components/AddTaskDialog";
 import { AIChat } from "@/components/AIChat";
@@ -88,8 +87,7 @@ const Index = () => {
       dueDate: "2024-12-09",
       completed: false,
       priority: "medium" as const,
-      petName: "Max",
-      isPremium: true
+      petName: "Max"
     }
   ]);
 
@@ -124,12 +122,6 @@ const Index = () => {
     });
   };
 
-  const handleUpgrade = () => {
-    toast({
-      title: "Premium Features Coming Soon! ⭐",
-      description: "Connect to Supabase to enable payment processing and premium features."
-    });
-  };
 
   const upcomingTasks = tasks.filter(task => !task.completed).slice(0, 5);
   const completedToday = tasks.filter(task => task.completed).length;
@@ -192,7 +184,7 @@ const Index = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <Card className="warm-glow border-2 border-success/20">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
@@ -232,24 +224,7 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card className="warm-glow border-2 border-premium/20">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-premium/20 to-premium/10 flex items-center justify-center">
-                    <Star className="h-6 w-6 text-premium" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground font-medium">Premium</p>
-                    <Badge variant="outline" className="text-premium border-premium font-semibold">
-                      Upgrade ⭐
-                    </Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
-
-          <PremiumBanner onUpgrade={handleUpgrade} />
         </div>
 
         {/* Main Content */}

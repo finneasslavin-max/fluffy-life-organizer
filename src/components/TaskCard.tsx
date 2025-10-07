@@ -14,7 +14,6 @@ interface Task {
   completed: boolean;
   priority: "low" | "medium" | "high";
   petName: string;
-  isPremium?: boolean;
 }
 
 interface TaskCardProps {
@@ -44,8 +43,7 @@ export function TaskCard({ task, onToggleComplete, onEdit }: TaskCardProps) {
   return (
     <Card className={cn(
       "p-4 transition-all duration-300 hover:shadow-md",
-      task.completed && "opacity-60 bg-muted/30",
-      task.isPremium && "border-premium/50 bg-premium/5"
+      task.completed && "opacity-60 bg-muted/30"
     )}>
       <div className="flex items-start gap-3">
         <Checkbox 
@@ -65,12 +63,6 @@ export function TaskCard({ task, onToggleComplete, onEdit }: TaskCardProps) {
               )}>
                 {task.title}
               </h4>
-              {task.isPremium && (
-                <Badge variant="outline" className="text-premium border-premium">
-                  <Star className="h-3 w-3 mr-1" />
-                  Premium
-                </Badge>
-              )}
             </div>
             <Badge className={priorityColors[task.priority]} variant="outline">
               {task.priority}

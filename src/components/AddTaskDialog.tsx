@@ -36,8 +36,7 @@ export function AddTaskDialog({ pets, onAddTask, trigger }: AddTaskDialogProps) 
         dueDate: formData.dueDate,
         priority: formData.priority,
         petName: selectedPet?.name || "Unknown Pet",
-        completed: false,
-        isPremium: formData.type === "medication" || formData.type === "exercise"
+        completed: false
       });
       setFormData({ title: "", description: "", type: "", dueDate: "", priority: "medium", petId: "" });
       setOpen(false);
@@ -94,8 +93,8 @@ export function AddTaskDialog({ pets, onAddTask, trigger }: AddTaskDialogProps) 
                 <SelectContent>
                   <SelectItem value="appointment">📅 Appointment</SelectItem>
                   <SelectItem value="grooming">✂️ Grooming</SelectItem>
-                  <SelectItem value="medication">💊 Medication (Premium)</SelectItem>
-                  <SelectItem value="exercise">🏃 Exercise (Premium)</SelectItem>
+                  <SelectItem value="medication">💊 Medication</SelectItem>
+                  <SelectItem value="exercise">🏃 Exercise</SelectItem>
                   <SelectItem value="feeding">🍽️ Feeding</SelectItem>
                 </SelectContent>
               </Select>
