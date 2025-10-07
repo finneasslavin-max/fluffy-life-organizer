@@ -4,6 +4,7 @@ import { TaskCard } from "@/components/TaskCard";
 import { PremiumBanner } from "@/components/PremiumBanner";
 import { AddPetDialog } from "@/components/AddPetDialog";
 import { AddTaskDialog } from "@/components/AddTaskDialog";
+import { AIChat } from "@/components/AIChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -253,10 +254,11 @@ const Index = () => {
 
         {/* Main Content */}
         <Tabs defaultValue="pets" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="pets">My Pets</TabsTrigger>
             <TabsTrigger value="schedule">Schedule</TabsTrigger>
             <TabsTrigger value="tasks">All Tasks</TabsTrigger>
+            <TabsTrigger value="ai">AI Assistant</TabsTrigger>
           </TabsList>
 
           <TabsContent value="pets">
@@ -337,6 +339,13 @@ const Index = () => {
                   ))}
                 </div>
               )}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="ai">
+            <div className="space-y-6">
+              <h2 className="text-2xl font-semibold">AI Pet Care Assistant</h2>
+              <AIChat />
             </div>
           </TabsContent>
         </Tabs>
