@@ -8,60 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 28 40% 98%;
-    --foreground: 25 25% 25%;
+    --background: 220 25% 95%;
+    --foreground: 220 30% 15%;
 
-    --card: 30 60% 98%;
-    --card-foreground: 25 25% 25%;
+    --card: 200 60% 97%;
+    --card-foreground: 220 30% 15%;
 
-    --popover: 30 60% 98%;
-    --popover-foreground: 25 25% 25%;
+    --popover: 200 60% 97%;
+    --popover-foreground: 220 30% 15%;
 
-    --primary: 220 70% 55%;
+    --primary: 260 85% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 220 15% 25%;
+    --secondary: 340 75% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 15% 94%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 200 20% 90%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 200 85% 65%;
-    --accent-foreground: 220 25% 15%;
+    --accent: 180 70% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --success: 142 70% 45%;
+    --success: 142 75% 50%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 92% 50%;
+    --warning: 38 95% 55%;
     --warning-foreground: 0 0% 100%;
 
-    --premium: 260 75% 60%;
+    --premium: 280 80% 65%;
     --premium-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 85% 62%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 40% 88%;
-    --input: 35 50% 96%;
-    --ring: 340 75% 68%;
+    --border: 220 20% 85%;
+    --input: 200 30% 96%;
+    --ring: 260 85% 58%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 250 50% 96%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 260 40% 25%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 260 85% 58%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 340 75% 65%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 220 20% 85%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 260 85% 58%;
   }
 
   .dark {
@@ -120,15 +120,16 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(var(--accent) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--success) / 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(var(--accent) / 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--secondary) / 0.08) 0%, transparent 60%);
   }
   
   .cozy-gradient {
     background: linear-gradient(135deg, 
-      hsl(var(--background)) 0%,
-      hsl(var(--secondary)) 100%
+      hsl(var(--primary) / 0.1) 0%,
+      hsl(var(--accent) / 0.1) 50%,
+      hsl(var(--secondary) / 0.1) 100%
     );
   }
   
