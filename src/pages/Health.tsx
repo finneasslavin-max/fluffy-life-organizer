@@ -3,8 +3,25 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Activity, Calendar, FileText, Plus, Stethoscope, TrendingUp } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Health() {
+  const { toast } = useToast();
+
+  const handleAddRecord = () => {
+    toast({
+      title: "Add Health Record",
+      description: "Opening health record form...",
+    });
+  };
+
+  const handleViewDetails = () => {
+    toast({
+      title: "View Details",
+      description: "Opening detailed health record...",
+    });
+  };
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -12,7 +29,7 @@ export default function Health() {
           <h1 className="text-3xl font-bold text-foreground">Health Records</h1>
           <p className="text-muted-foreground">Track and manage your pets' health information</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleAddRecord}>
           <Plus className="h-4 w-4" />
           Add Record
         </Button>
@@ -168,7 +185,7 @@ export default function Health() {
                     <p className="text-sm text-muted-foreground">Dec 15, 2024 • Dr. Johnson</p>
                     <p className="text-sm">Weight: 32kg, Temperature: Normal, Heart Rate: 80bpm</p>
                   </div>
-                  <Button variant="outline" size="sm">View Details</Button>
+                  <Button variant="outline" size="sm" onClick={handleViewDetails}>View Details</Button>
                 </div>
                 <div className="flex items-center gap-4 p-4 border rounded-lg">
                   <FileText className="h-8 w-8 text-muted-foreground" />
@@ -177,7 +194,7 @@ export default function Health() {
                     <p className="text-sm text-muted-foreground">Nov 20, 2024 • Dr. Smith</p>
                     <p className="text-sm">Weight: 4.2kg, Temperature: Normal, Dental needs attention</p>
                   </div>
-                  <Button variant="outline" size="sm">View Details</Button>
+                  <Button variant="outline" size="sm" onClick={handleViewDetails}>View Details</Button>
                 </div>
               </div>
             </CardContent>

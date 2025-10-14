@@ -4,8 +4,39 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Award, BookOpen, GraduationCap, Play, Star, Target } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Training() {
+  const { toast } = useToast();
+
+  const handleStartSession = () => {
+    toast({
+      title: "Starting Training Session",
+      description: "Let's begin your pet's training!",
+    });
+  };
+
+  const handleReviewLesson = () => {
+    toast({
+      title: "Review Lesson",
+      description: "Loading lesson materials...",
+    });
+  };
+
+  const handleContinueLesson = () => {
+    toast({
+      title: "Continue Lesson",
+      description: "Resuming your training progress...",
+    });
+  };
+
+  const handleStartLesson = () => {
+    toast({
+      title: "Start Lesson",
+      description: "Beginning new lesson...",
+    });
+  };
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -13,7 +44,7 @@ export default function Training() {
           <h1 className="text-3xl font-bold text-foreground">Training Center</h1>
           <p className="text-muted-foreground">Build stronger bonds through positive training</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleStartSession}>
           <Play className="h-4 w-4" />
           Start Session
         </Button>
@@ -147,7 +178,7 @@ export default function Training() {
                   <p className="text-sm text-muted-foreground mb-3">
                     Basic obedience command that forms the foundation for other training.
                   </p>
-                  <Button variant="outline" size="sm" className="w-full">Review Lesson</Button>
+                  <Button variant="outline" size="sm" className="w-full" onClick={handleReviewLesson}>Review Lesson</Button>
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -157,7 +188,7 @@ export default function Training() {
                   <p className="text-sm text-muted-foreground mb-3">
                     Teach your dog to remain in position until released.
                   </p>
-                  <Button size="sm" className="w-full">Continue Lesson</Button>
+                  <Button size="sm" className="w-full" onClick={handleContinueLesson}>Continue Lesson</Button>
                 </div>
                 <div className="p-4 border rounded-lg opacity-50">
                   <div className="flex items-center justify-between mb-2">
@@ -190,7 +221,7 @@ export default function Training() {
                   <p className="text-sm text-muted-foreground mb-3">
                     Ensure consistent and proper litter box usage.
                   </p>
-                  <Button variant="outline" size="sm" className="w-full">Review Tips</Button>
+                  <Button variant="outline" size="sm" className="w-full" onClick={handleReviewLesson}>Review Tips</Button>
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -200,7 +231,7 @@ export default function Training() {
                   <p className="text-sm text-muted-foreground mb-3">
                     Redirect scratching behavior to appropriate surfaces.
                   </p>
-                  <Button size="sm" className="w-full">Continue Training</Button>
+                  <Button size="sm" className="w-full" onClick={handleContinueLesson}>Continue Training</Button>
                 </div>
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -210,7 +241,7 @@ export default function Training() {
                   <p className="text-sm text-muted-foreground mb-3">
                     Keep your cat off counters and tables safely.
                   </p>
-                  <Button size="sm" className="w-full">Start Lesson</Button>
+                  <Button size="sm" className="w-full" onClick={handleStartLesson}>Start Lesson</Button>
                 </div>
               </CardContent>
             </Card>

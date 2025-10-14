@@ -2,8 +2,46 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Star, Package, TrendingUp } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Supplies() {
+  const { toast } = useToast();
+
+  const handleViewCart = () => {
+    toast({
+      title: "Shopping Cart",
+      description: "Opening your cart...",
+    });
+  };
+
+  const handleViewProduct = () => {
+    toast({
+      title: "View Product",
+      description: "Loading product details...",
+    });
+  };
+
+  const handleAddToCart = () => {
+    toast({
+      title: "Added to Cart",
+      description: "Item added to your shopping cart!",
+    });
+  };
+
+  const handleShopNow = () => {
+    toast({
+      title: "Shop Now",
+      description: "Browsing free shipping offers...",
+    });
+  };
+
+  const handleViewDeals = () => {
+    toast({
+      title: "View Deals",
+      description: "Loading premium food deals...",
+    });
+  };
+
   const categories = [
     { name: "Food & Treats", count: 156, icon: "🍖" },
     { name: "Toys", count: 89, icon: "🎾" },
@@ -63,7 +101,7 @@ export default function Supplies() {
           <h1 className="text-3xl font-bold text-foreground">Pet Supplies Store</h1>
           <p className="text-muted-foreground">Everything your pets need, delivered to your door</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleViewCart}>
           <ShoppingCart className="h-4 w-4" />
           View Cart (3)
         </Button>
@@ -146,7 +184,7 @@ export default function Supplies() {
                 <span className="text-sm font-medium">4.9</span>
                 <span className="text-sm text-muted-foreground">(89)</span>
               </div>
-              <Button className="w-full mt-3" variant="outline">View Product</Button>
+              <Button className="w-full mt-3" variant="outline" onClick={handleViewProduct}>View Product</Button>
             </div>
           </CardContent>
         </Card>
@@ -173,7 +211,7 @@ export default function Supplies() {
                 </div>
                 
                 {product.inStock ? (
-                  <Button className="w-full">
+                  <Button className="w-full" onClick={handleAddToCart}>
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Add to Cart
                   </Button>
@@ -199,14 +237,14 @@ export default function Supplies() {
               <p className="text-muted-foreground mb-4">
                 Get free shipping on orders over $50. Limited time offer!
               </p>
-              <Button>Shop Now</Button>
+              <Button onClick={handleShopNow}>Shop Now</Button>
             </div>
             <div className="p-6 bg-success/10 rounded-lg border border-success/20">
               <h3 className="text-xl font-bold mb-2">20% Off Premium Food</h3>
               <p className="text-muted-foreground mb-4">
                 Save on all premium pet food brands this month.
               </p>
-              <Button variant="outline">View Deals</Button>
+              <Button variant="outline" onClick={handleViewDeals}>View Deals</Button>
             </div>
           </div>
         </CardContent>

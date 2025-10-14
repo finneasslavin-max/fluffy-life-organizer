@@ -4,8 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Calendar, MapPin, Phone, Star, Clock, Stethoscope } from "lucide-react";
 import vetDog from "@/assets/vet-dog.png";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Vets() {
+  const { toast } = useToast();
+
+  const handleBookAppointment = () => {
+    toast({
+      title: "Book Appointment",
+      description: "Opening appointment scheduler...",
+    });
+  };
+
+  const handleCall = (vetName: string) => {
+    toast({
+      title: "Calling Vet",
+      description: `Connecting to ${vetName}...`,
+    });
+  };
+
   const vets = [
     {
       id: 1,
@@ -52,7 +69,7 @@ export default function Vets() {
           <h1 className="text-3xl font-bold text-foreground">Veterinarians</h1>
           <p className="text-muted-foreground">Find trusted veterinary care for your pets</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleBookAppointment}>
           <Calendar className="h-4 w-4" />
           Book Appointment
         </Button>
@@ -156,11 +173,11 @@ export default function Vets() {
                         </div>
                       </div>
                       <div className="flex gap-2">
-                        <Button size="sm">
+                        <Button size="sm" onClick={handleBookAppointment}>
                           <Calendar className="h-4 w-4 mr-2" />
                           Book
                         </Button>
-                        <Button size="sm" variant="outline">
+                        <Button size="sm" variant="outline" onClick={() => handleCall(vet.name)}>
                           <Phone className="h-4 w-4 mr-2" />
                           Call
                         </Button>

@@ -7,8 +7,67 @@ import realCat from "@/assets/real-cat.png";
 import realRabbit from "@/assets/real-rabbit.png";
 import groomingCat from "@/assets/grooming-cat.png";
 import vetDog from "@/assets/vet-dog.png";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Gallery() {
+  const { toast } = useToast();
+
+  const handleAddPhoto = () => {
+    toast({
+      title: "Add Photo",
+      description: "Opening photo upload...",
+    });
+  };
+
+  const handleViewAllPhotos = () => {
+    toast({
+      title: "View All Photos",
+      description: "Loading complete photo gallery...",
+    });
+  };
+
+  const handleTakePhoto = () => {
+    toast({
+      title: "Take Photo",
+      description: "Opening camera...",
+    });
+  };
+
+  const handleUploadPhoto = () => {
+    toast({
+      title: "Upload Photo",
+      description: "Select photos from your device...",
+    });
+  };
+
+  const handleCreateAlbum = () => {
+    toast({
+      title: "Create Album",
+      description: "Creating new photo album...",
+    });
+  };
+
+  const handleLikePhoto = () => {
+    toast({
+      title: "Liked!",
+      description: "Photo added to favorites ❤️",
+    });
+  };
+
+  const handleSharePhoto = () => {
+    toast({
+      title: "Share Photo",
+      description: "Opening share options...",
+    });
+  };
+
+  const handleDownloadPhoto = () => {
+    toast({
+      title: "Download Photo",
+      description: "Downloading photo...",
+    });
+  };
+
   const photos = [
     { id: 1, src: realDog, alt: "Bella playing in the park", pet: "Bella", date: "Dec 20, 2024", likes: 12 },
     { id: 2, src: realCat, alt: "Whiskers sleeping", pet: "Whiskers", date: "Dec 18, 2024", likes: 8 },
@@ -25,7 +84,7 @@ export default function Gallery() {
           <h1 className="text-3xl font-bold text-foreground">Pet Photo Gallery</h1>
           <p className="text-muted-foreground">Capture and share your favorite pet moments</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleAddPhoto}>
           <Plus className="h-4 w-4" />
           Add Photo
         </Button>
@@ -51,7 +110,7 @@ export default function Gallery() {
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="w-full mt-4">View All Photos</Button>
+            <Button variant="outline" className="w-full mt-4" onClick={handleViewAllPhotos}>View All Photos</Button>
           </CardContent>
         </Card>
 
@@ -90,15 +149,15 @@ export default function Gallery() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button className="w-full flex items-center gap-2">
+            <Button className="w-full flex items-center gap-2" onClick={handleTakePhoto}>
               <Camera className="h-4 w-4" />
               Take Photo
             </Button>
-            <Button variant="outline" className="w-full flex items-center gap-2">
+            <Button variant="outline" className="w-full flex items-center gap-2" onClick={handleUploadPhoto}>
               <Plus className="h-4 w-4" />
               Upload Photo
             </Button>
-            <Button variant="outline" className="w-full flex items-center gap-2">
+            <Button variant="outline" className="w-full flex items-center gap-2" onClick={handleCreateAlbum}>
               <Share2 className="h-4 w-4" />
               Create Album
             </Button>
@@ -117,13 +176,13 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                 <div className="flex gap-2">
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
+                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0" onClick={handleLikePhoto}>
                     <Heart className="h-4 w-4" />
                   </Button>
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
+                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0" onClick={handleSharePhoto}>
                     <Share2 className="h-4 w-4" />
                   </Button>
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
+                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0" onClick={handleDownloadPhoto}>
                     <Download className="h-4 w-4" />
                   </Button>
                 </div>

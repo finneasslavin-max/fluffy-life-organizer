@@ -5,8 +5,32 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { Calendar, Heart, MapPin, Phone, Activity, Pill } from "lucide-react";
 import realDog from "@/assets/real-dog.png";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Bella() {
+  const { toast } = useToast();
+
+  const handleScheduleAppointment = () => {
+    toast({
+      title: "Schedule Appointment",
+      description: "Opening appointment scheduler for Bella...",
+    });
+  };
+
+  const handleAddMedicalRecord = () => {
+    toast({
+      title: "Add Medical Record",
+      description: "Opening medical record form...",
+    });
+  };
+
+  const handleUpdateProfile = () => {
+    toast({
+      title: "Update Profile",
+      description: "Opening profile editor...",
+    });
+  };
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center gap-4 mb-6">
@@ -146,13 +170,13 @@ export default function Bella() {
             <CardTitle>Quick Actions</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button className="w-full" variant="default">
+            <Button className="w-full" variant="default" onClick={handleScheduleAppointment}>
               Schedule Appointment
             </Button>
-            <Button className="w-full" variant="outline">
+            <Button className="w-full" variant="outline" onClick={handleAddMedicalRecord}>
               Add Medical Record
             </Button>
-            <Button className="w-full" variant="outline">
+            <Button className="w-full" variant="outline" onClick={handleUpdateProfile}>
               Update Profile
             </Button>
           </CardContent>

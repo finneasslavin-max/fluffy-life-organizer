@@ -4,8 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Calendar, Heart, Scissors, Star, Plus } from "lucide-react";
 import groomingCat from "@/assets/grooming-cat.png";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Grooming() {
+  const { toast } = useToast();
+
+  const handleBookGrooming = () => {
+    toast({
+      title: "Booking Grooming",
+      description: "Opening appointment scheduler...",
+    });
+  };
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -13,7 +23,7 @@ export default function Grooming() {
           <h1 className="text-3xl font-bold text-foreground">Grooming Center</h1>
           <p className="text-muted-foreground">Keep your pets looking and feeling their best</p>
         </div>
-        <Button className="flex items-center gap-2">
+        <Button className="flex items-center gap-2" onClick={handleBookGrooming}>
           <Plus className="h-4 w-4" />
           Book Grooming
         </Button>
@@ -192,21 +202,21 @@ export default function Grooming() {
               <h4 className="font-medium mb-2">Basic Grooming</h4>
               <p className="text-sm text-muted-foreground mb-4">Bath, brush, nail trim, ear cleaning</p>
               <p className="text-lg font-bold text-primary">$45</p>
-              <Button className="mt-4 w-full" variant="outline">Book Now</Button>
+              <Button className="mt-4 w-full" variant="outline" onClick={handleBookGrooming}>Book Now</Button>
             </div>
             <div className="text-center p-6 border rounded-lg hover:bg-muted/50 transition-colors">
               <img src={groomingCat} alt="Premium Grooming" className="w-20 h-20 mx-auto mb-4 rounded-full object-cover" />
               <h4 className="font-medium mb-2">Premium Grooming</h4>
               <p className="text-sm text-muted-foreground mb-4">Full service + styling, teeth cleaning</p>
               <p className="text-lg font-bold text-premium">$75</p>
-              <Button className="mt-4 w-full">Book Now</Button>
+              <Button className="mt-4 w-full" onClick={handleBookGrooming}>Book Now</Button>
             </div>
             <div className="text-center p-6 border rounded-lg hover:bg-muted/50 transition-colors">
               <img src={groomingCat} alt="Deluxe Grooming" className="w-20 h-20 mx-auto mb-4 rounded-full object-cover" />
               <h4 className="font-medium mb-2">Deluxe Spa</h4>
               <p className="text-sm text-muted-foreground mb-4">Premium + massage, aromatherapy</p>
               <p className="text-lg font-bold text-accent">$120</p>
-              <Button className="mt-4 w-full" variant="outline">Book Now</Button>
+              <Button className="mt-4 w-full" variant="outline" onClick={handleBookGrooming}>Book Now</Button>
             </div>
           </div>
         </CardContent>
