@@ -65,7 +65,7 @@ export default function Bella() {
               </div>
               <div className="flex justify-between">
                 <span className="text-sm">Last Checkup</span>
-                <span className="text-sm">Dec 15, 2024</span>
+                <span className="text-sm">Dec 15, 2025</span>
               </div>
             </div>
           </CardContent>
@@ -83,7 +83,7 @@ export default function Bella() {
               <div className="h-2 w-2 rounded-full bg-primary"></div>
               <div>
                 <p className="font-medium">Vaccination</p>
-                <p className="text-sm text-muted-foreground">Dec 30, 2024</p>
+                <p className="text-sm text-muted-foreground">Dec 30, 2025</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 bg-muted rounded-lg">

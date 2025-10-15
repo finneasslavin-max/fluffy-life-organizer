@@ -32,7 +32,7 @@ const Index = () => {
       type: "cat" as const,
       breed: "Maine Coon",
       age: 3,
-      nextAppointment: "Dec 15, 2024",
+      nextAppointment: "Dec 15, 2025",
       groomingProgress: 75,
       healthScore: 92
     },
@@ -42,7 +42,7 @@ const Index = () => {
       type: "dog" as const,
       breed: "Golden Retriever",
       age: 5,
-      nextAppointment: "Dec 12, 2024",
+      nextAppointment: "Dec 12, 2025",
       groomingProgress: 40,
       healthScore: 88
     },
@@ -52,7 +52,7 @@ const Index = () => {
       type: "rabbit" as const,
       breed: "Holland Lop",
       age: 2,
-      nextAppointment: "Dec 20, 2024",
+      nextAppointment: "Dec 20, 2025",
       groomingProgress: 90,
       healthScore: 95
     }
@@ -64,7 +64,7 @@ const Index = () => {
       title: "Vet Checkup",
       description: "Annual health examination",
       type: "appointment" as const,
-      dueDate: "2024-12-15",
+      dueDate: "2025-12-15",
       completed: false,
       priority: "high" as const,
       petName: "Luna"
@@ -74,7 +74,7 @@ const Index = () => {
       title: "Nail Trimming",
       description: "Monthly nail care",
       type: "grooming" as const,
-      dueDate: "2024-12-10",
+      dueDate: "2025-12-10",
       completed: true,
       priority: "medium" as const,
       petName: "Max"
@@ -84,7 +84,7 @@ const Index = () => {
       title: "Exercise Session",
       description: "30-minute walk in the park",
       type: "exercise" as const,
-      dueDate: "2024-12-09",
+      dueDate: "2025-12-09",
       completed: false,
       priority: "medium" as const,
       petName: "Max"

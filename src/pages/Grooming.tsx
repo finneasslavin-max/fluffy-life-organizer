@@ -153,7 +153,7 @@ export default function Grooming() {
               </div>
               <div className="flex-1">
                 <p className="font-medium">Whiskers - Basic Grooming</p>
-                <p className="text-sm text-muted-foreground">Dec 28, 2024 at 2:00 PM</p>
+                <p className="text-sm text-muted-foreground">Dec 28, 2025 at 2:00 PM</p>
                 <p className="text-sm">Includes: Brush, nail trim, sanitary trim</p>
               </div>
               <Badge variant="outline">Scheduled</Badge>

@@ -41,7 +41,7 @@ export default function Whiskers() {
               </div>
               <div className="flex justify-between">
                 <span className="text-sm">Last Checkup</span>
-                <span className="text-sm">Nov 20, 2024</span>
+                <span className="text-sm">Nov 20, 2025</span>
               </div>
             </div>
           </CardContent>
@@ -66,7 +66,7 @@ export default function Whiskers() {
               <div className="h-2 w-2 rounded-full bg-accent"></div>
               <div>
                 <p className="font-medium">Grooming</p>
-                <p className="text-sm text-muted-foreground">Dec 28, 2024</p>
+                <p className="text-sm text-muted-foreground">Dec 28, 2025</p>
               </div>
             </div>
           </CardContent>

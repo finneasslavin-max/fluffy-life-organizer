@@ -111,7 +111,7 @@ export default function Vets() {
               <div className="h-2 w-2 rounded-full bg-primary"></div>
               <div>
                 <p className="font-medium">Bella - Dr. Johnson</p>
-                <p className="text-sm text-muted-foreground">Dec 30, 2024 at 10:00 AM</p>
+                <p className="text-sm text-muted-foreground">Dec 30, 2025 at 10:00 AM</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 bg-muted rounded-lg">

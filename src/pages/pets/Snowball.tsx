@@ -41,7 +41,7 @@ export default function Snowball() {
               </div>
               <div className="flex justify-between">
                 <span className="text-sm">Last Checkup</span>
-                <span className="text-sm">Dec 10, 2024</span>
+                <span className="text-sm">Dec 10, 2025</span>
               </div>
             </div>
           </CardContent>

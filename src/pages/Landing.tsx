@@ -253,7 +253,7 @@ const Landing = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
               <p className="text-muted-foreground mb-4">
-                Founded in 2024, PetCare Planner was born from the personal experience of pet owners 
+                Founded in 2025, PetCare Planner was born from the personal experience of pet owners 
                 who struggled to keep track of their pets' complex care needs. We realized that 
                 traditional methods—scattered notes, multiple apps, and paper records—simply weren't enough.
               </p>
@@ -347,7 +347,7 @@ const Landing = () => {
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 PetCare Planner. All rights reserved.</p>
+            <p>&copy; 2025 PetCare Planner. All rights reserved.</p>
           </div>
         </div>
       </footer>

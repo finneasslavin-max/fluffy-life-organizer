@@ -59,7 +59,7 @@ export default function Health() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Last Checkup</span>
-                  <span className="text-sm">Dec 15, 2024</span>
+                  <span className="text-sm">Dec 15, 2025</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Next Due</span>
@@ -82,7 +82,7 @@ export default function Health() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Last Checkup</span>
-                  <span className="text-sm">Nov 20, 2024</span>
+                  <span className="text-sm">Nov 20, 2025</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Next Due</span>
@@ -105,7 +105,7 @@ export default function Health() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Last Checkup</span>
-                  <span className="text-sm">Dec 10, 2024</span>
+                  <span className="text-sm">Dec 10, 2025</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Next Due</span>
@@ -129,7 +129,7 @@ export default function Health() {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium">Bella - Annual Checkup</p>
-                  <p className="text-sm text-muted-foreground">Completed on Dec 15, 2024 • All vitals normal</p>
+                  <p className="text-sm text-muted-foreground">Completed on Dec 15, 2025 • All vitals normal</p>
                 </div>
                 <Badge variant="outline">Completed</Badge>
               </div>
@@ -157,7 +157,7 @@ export default function Health() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 border rounded-lg">
                     <h4 className="font-medium">Bella - Rabies</h4>
-                    <p className="text-sm text-muted-foreground">Due: Dec 30, 2024</p>
+                    <p className="text-sm text-muted-foreground">Due: Dec 30, 2025</p>
                     <Badge className="mt-2 bg-warning">Due Soon</Badge>
                   </div>
                   <div className="p-4 border rounded-lg">
@@ -182,7 +182,7 @@ export default function Health() {
                   <FileText className="h-8 w-8 text-muted-foreground" />
                   <div className="flex-1">
                     <h4 className="font-medium">Bella - Annual Physical</h4>
-                    <p className="text-sm text-muted-foreground">Dec 15, 2024 • Dr. Johnson</p>
+                    <p className="text-sm text-muted-foreground">Dec 15, 2025 • Dr. Johnson</p>
                     <p className="text-sm">Weight: 32kg, Temperature: Normal, Heart Rate: 80bpm</p>
                   </div>
                   <Button variant="outline" size="sm" onClick={handleViewDetails}>View Details</Button>
@@ -191,7 +191,7 @@ export default function Health() {
                   <FileText className="h-8 w-8 text-muted-foreground" />
                   <div className="flex-1">
                     <h4 className="font-medium">Whiskers - Routine Checkup</h4>
-                    <p className="text-sm text-muted-foreground">Nov 20, 2024 • Dr. Smith</p>
+                    <p className="text-sm text-muted-foreground">Nov 20, 2025 • Dr. Smith</p>
                     <p className="text-sm">Weight: 4.2kg, Temperature: Normal, Dental needs attention</p>
                   </div>
                   <Button variant="outline" size="sm" onClick={handleViewDetails}>View Details</Button>
@@ -221,7 +221,7 @@ export default function Health() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h4 className="font-medium">Whiskers - Hairball Prevention</h4>
-                      <p className="text-sm text-muted-foreground">Weekly • Next dose: Dec 29, 2024</p>
+                      <p className="text-sm text-muted-foreground">Weekly • Next dose: Dec 29, 2025</p>
                     </div>
                     <Badge className="bg-success">Active</Badge>
                   </div>

@@ -157,12 +157,12 @@ export default function Supplies() {
           <CardContent className="space-y-3">
             <div className="p-3 bg-muted rounded-lg">
               <p className="font-medium">Order #12345</p>
-              <p className="text-sm text-muted-foreground">Delivered Dec 20, 2024</p>
+              <p className="text-sm text-muted-foreground">Delivered Dec 20, 2025</p>
               <Badge className="mt-1 bg-success">Delivered</Badge>
             </div>
             <div className="p-3 bg-muted rounded-lg">
               <p className="font-medium">Order #12344</p>
-              <p className="text-sm text-muted-foreground">Expected Dec 28, 2024</p>
+              <p className="text-sm text-muted-foreground">Expected Dec 28, 2025</p>
               <Badge className="mt-1" variant="outline">In Transit</Badge>
             </div>
           </CardContent>

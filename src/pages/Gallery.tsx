@@ -69,12 +69,12 @@ export default function Gallery() {
   };
 
   const photos = [
-    { id: 1, src: realDog, alt: "Bella playing in the park", pet: "Bella", date: "Dec 20, 2024", likes: 12 },
-    { id: 2, src: realCat, alt: "Whiskers sleeping", pet: "Whiskers", date: "Dec 18, 2024", likes: 8 },
-    { id: 3, src: realRabbit, alt: "Snowball eating hay", pet: "Snowball", date: "Dec 15, 2024", likes: 15 },
-    { id: 4, src: groomingCat, alt: "Whiskers after grooming", pet: "Whiskers", date: "Dec 10, 2024", likes: 6 },
-    { id: 5, src: vetDog, alt: "Bella at the vet", pet: "Bella", date: "Dec 8, 2024", likes: 4 },
-    { id: 6, src: realDog, alt: "Bella's training session", pet: "Bella", date: "Dec 5, 2024", likes: 9 },
+    { id: 1, src: realDog, alt: "Bella playing in the park", pet: "Bella", date: "Dec 20, 2025", likes: 12 },
+    { id: 2, src: realCat, alt: "Whiskers sleeping", pet: "Whiskers", date: "Dec 18, 2025", likes: 8 },
+    { id: 3, src: realRabbit, alt: "Snowball eating hay", pet: "Snowball", date: "Dec 15, 2025", likes: 15 },
+    { id: 4, src: groomingCat, alt: "Whiskers after grooming", pet: "Whiskers", date: "Dec 10, 2025", likes: 6 },
+    { id: 5, src: vetDog, alt: "Bella at the vet", pet: "Bella", date: "Dec 8, 2025", likes: 4 },
+    { id: 6, src: realDog, alt: "Bella's training session", pet: "Bella", date: "Dec 5, 2025", likes: 9 },
   ];
 
   return (
@@ -135,7 +135,7 @@ export default function Gallery() {
               </div>
               <div>
                 <p className="font-medium">Snowball eating hay</p>
-                <p className="text-sm text-muted-foreground">Dec 15, 2024</p>
+                <p className="text-sm text-muted-foreground">Dec 15, 2025</p>
               </div>
             </div>
           </CardContent>
