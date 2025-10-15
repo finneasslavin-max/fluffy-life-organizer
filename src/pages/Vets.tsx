@@ -31,7 +31,7 @@ export default function Vets() {
       rating: 4.8,
       reviews: 124,
       phone: "(555) 123-4567",
-      address: "123 Pet Care St, Petville",
+      address: "123 Pet Care St, Denver, CO",
       hours: "Mon-Fri 8AM-6PM",
       emergency: true,
       distance: "0.8 miles"
@@ -43,7 +43,7 @@ export default function Vets() {
       rating: 4.9,
       reviews: 89,
       phone: "(555) 234-5678",
-      address: "456 Animal Ave, Petville",
+      address: "456 Animal Ave, Boulder, CO",
       hours: "Mon-Sat 9AM-7PM",
       emergency: false,
       distance: "1.2 miles"
@@ -55,7 +55,7 @@ export default function Vets() {
       rating: 4.7,
       reviews: 156,
       phone: "(555) 999-0000",
-      address: "789 Emergency Blvd, Petville",
+      address: "789 Emergency Blvd, Colorado Springs, CO",
       hours: "24/7",
       emergency: true,
       distance: "2.1 miles"
